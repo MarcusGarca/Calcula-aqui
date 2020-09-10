@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/b907dcbb89.js" crossorigin="anonymous"></script>
+    <!--CSS GoogleFonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <!-- Meu CSS -->
+    <link rel="stylesheet" href="/style/style.css">
+
+    <title>:.Calcula aqui.:</title>
+</head>
+
+<body id="irrf">
+    <header class="fixed-top">
+        <nav class="navbar navbar-light">
+            <a class="navbar-brand" href="#">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Calcula aqui - IRPF</font>
+                </font>
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false"
+                aria-label="Alternar de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="navbarsExample01" style="">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/rpa.html">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Cálculo RPA</font>
+                            </font>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/vale.html">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Cálculo Vale Transporte</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+        </nav>
+    </header>
+
+    <main class="container-fluid">
+        <div class="row justify-content-md-center text-center">
+            <div class="col col-lg-12 frase-topo">
+                Cálculo do IRRF renda mensal
+            </div>
+        </div>
+        <section class="container">
+            <div class="row">
+                <div class="col">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col col-md-4 offset-md-4">
+                                <label for="Rendimmento bruto">Rendimento Bruto</label>
+                                <input type="tel" class="form-control" id="renda" onkeyup="formatarMoeda()"
+                                    placeholder="R$ 0,00">
+                                <label for="disabledSelect">Considerar INSS?</label>
+                                <select id="select-inss" class="form-control" required>
+                                    <option value="1">SIM</option>
+                                    <option value="2">NÃO</option>
+                                </select>
+
+                                <label for="Dependentes">Dependentes</label>
+                                <input type="number" min="0" max="100" class="form-control" id="dependente"
+                                    placeholder="No. Depedentes">
+                                <label for="Pensao Alimenticia">Pensão alimentícia</label>
+                                <input type="tel" class="form-control" id="pensao" onkeyup="formatarMoeda()"
+                                    placeholder="R$ 0,00">
+                                <label for="Outras Deducoes">Outras deduções legais</label>
+                                <input type="tel" class="form-control" id="outra" onkeyup="formatarMoeda()"
+                                    placeholder="R$ 0,00">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group d-flex p-2 bd-highlight col-md-4 offset-md-4">
+
+                            <a href="#retencao-inss" id="calculo"
+                                onclick="estimativaImpostoRenda();previdenciaSocial()">Calcular</a>
+
+                            <a href="" onclick="window.location.reload()" id="limpa">Limpar</a>
+                        </div>
+                        <table class="table col-md-4 offset-md-4">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Detalhes</th>
+                                    <th class="cabeca-valores" scope="col">Valores R$</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">IRRF Retido</th>
+                                    <td id="retencao-irpf">R$ 0,00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">INSS</th>
+                                    <td id="retencao-inss">R$ 0,00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+            </div>
+            </form>
+        </section>
+    </main>
+    <footer class="footer-copyright text-center py-2">
+        <a href="https://github.com/MarcusGarca" target="_blanck"><i class="fab fa-github fa-2x icone"></i></a>
+        <a href="mailto:marcusg.contabil@gmail.com" target="_blanck"><i class="fas fa-envelope fa-2x icone"></i></a>
+        <a href="https://www.linkedin.com/in/marcus-garcia-81b529140/" target="_blanck"><i
+                class="fa fa-linkedin fa-2x icone"></i></a>
+    </footer>
+    <!-- Optional JavaScript -->
+
+    <!-- Meu JS -->
+    <script src="/js/script.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/b907dcbb89.js" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

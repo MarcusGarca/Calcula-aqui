@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.frase-topo {
+    background: rgb(73, 165, 73);
+    color: white;
+    font-size: 1.6rem;
+}
+
+
+nav {
+    background: rgb(143, 190, 143);
+}
+
+main{
+    margin-top: 56px;
+    min-height: calc(100vh - 106px);
+}
+#calculo {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    background: white;
+    border-radius: .3rem;
+    border: solid .01rem blue;
+    color: blue;
+    width:6rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+#calculo:hover {
+    background-color: rgb(98, 98, 221);
+    border: rgb(98, 98, 221);
+    color: white;
+}
+
+#limpa {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    background: white;
+    border-radius: .3rem;
+    border: solid .01rem rgb(14, 112, 14);
+    color: rgb(14, 112, 14);
+    width: 6rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+#limpa:hover {
+    background-color: rgb(98, 221, 114);
+    border: rgb(98, 221, 114);
+    color: white;
+}
+
+.icone {
+    color: white;
+    margin-right: 1rem;
+}
+
+.icone:hover {
+    color: silver;
+}
+
+label{
+    margin-top: .8rem;
+}
+
+td{
+    text-align: right;
+}
+
+.resposta{
+    color:blue;
+    font-weight: bold;
+}
+.cabeca-valores{
+    text-align: right;
+}
+
+footer {
+    height: 50px;
+    background: rgb(73, 165, 73);
+}
+
