@@ -2,13 +2,13 @@
 
 function previdenciaSocial(){
     let vrRenda = parseFloat(document.getElementById("renda").value.replace(/\./g,''));
-    let faixaReal1 = 1045; // primeira faixa do INSS 2020
-    let faixaReal2i = 1045.01; // primeiro nível da segudnda faixa do INSS 2020
-    let faixaReal2 = 2089.60; // segundo nível da segunda faixa do INSS 2020
-    let faixaReal3i = 2089.61; // primeiro nível da terceira faixa do INSS 2020
-    let faixaReal3 = 3134.40; // segundo nível da terceira faiza do INSS 2020
-    let faixaReal4i = 3134.41; // primeiro nível da quarta faixa do INSS 2020
-    let faixaReal4 = 6101.06; // segundo nível da quarta faixa do INSS 2020
+    let faixaReal1 = 1100; // primeira faixa do INSS 2020
+    let faixaReal2i = 1100.01; // primeiro nível da segudnda faixa do INSS 2020
+    let faixaReal2 = 2203.48; // segundo nível da segunda faixa do INSS 2020
+    let faixaReal3i = 2203.49; // primeiro nível da terceira faixa do INSS 2020
+    let faixaReal3 = 3305.22; // segundo nível da terceira faiza do INSS 2020
+    let faixaReal4i = 3305.23; // primeiro nível da quarta faixa do INSS 2020
+    let faixaReal4 = 6433.57; // segundo nível da quarta faixa do INSS 2020
     let aliquota1 = 0.075; // alíquota primeira faixa INSS 2020
     let aliquota2 = 0.090; // alíquota segunda faixa INSS 2020
     let aliquota3 = 0.120; // alíquota terceita faixa INSS 2020
@@ -67,8 +67,8 @@ function impostoRenda(){
     let outras = parseFloat(document.getElementById("outra").value.replace(/\./g,''));
     let faixaIr1=1903.98; // primeira faixa do IRRF 2020
     let faixaIr2i=1903.99; // primeiro nível da segudnda faixa do IRRF 2020
-    let faixaIr2=2836.65; // segundo nível da segunda faixa do IRRF 2020
-    let faixaIr3i=2836.66; // primeiro nível da terceira faixa do IRRF 2020
+    let faixaIr2=2826.65; // segundo nível da segunda faixa do IRRF 2020
+    let faixaIr3i=2826.66; // primeiro nível da terceira faixa do IRRF 2020
     let faixaIr3=3751.05; // segundo nível da terceira faiza do IRRF 2020
     let faixaIr4i=3751.06; // primeiro nível da quarta faixa do IRRF 2020
     let faixaIr4=4664.68; // segundo nível da quarta faixa do IRRF 2020
@@ -152,21 +152,21 @@ function inssRpa(){
 
 function irpfRpa(){
     let vrServBruto = parseFloat(document.getElementById("servico").value.replace(/\./g,''));
-    let faixaIr1=1903.98; // primeira faixa do IRRF 2020
-    let faixaIr2i=1903.99; // primeiro nível da segudnda faixa do IRRF 2020
-    let faixaIr2=2836.65; // segundo nível da segunda faixa do IRRF 2020
-    let faixaIr3i=2836.66; // primeiro nível da terceira faixa do IRRF 2020
-    let faixaIr3=3751.05; // segundo nível da terceira faiza do IRRF 2020
-    let faixaIr4i=3751.06; // primeiro nível da quarta faixa do IRRF 2020
-    let faixaIr4=4664.68; // segundo nível da quarta faixa do IRRF 2020
-    let aliquotaIr1 = 0.075; // alíquota primeira faixa IRRF 2020
-    let aliquotaIr2 = 0.15; // alíquota segunda faixa IRRF 2020
-    let aliquotaIr3 = 0.225; // alíquota terceita faixa IRRF 2020
-    let aliquotaIr4 = 0.275; // alíquota quarta faixa IRRF 2020
-    let dedutivel1 = 142.80; // parcela dedutível primeira faixa IRRF 2020
-    let dedutivel2=354.80; // parcela dedutível segunda faixa IRRF 2020
-    let dedutivel3=636.13; // parcela dedutível terceira faixa IRRF 2020
-    let dedutivel4=869.36; // parcela dedutível quarta faixa IRRF 2020
+    let faixaIr1=1903.98; // primeira faixa do IRRF 2021
+    let faixaIr2i=1903.99; // primeiro nível da segudnda faixa do IRRF 2021
+    let faixaIr2=2826.65; // segundo nível da segunda faixa do IRRF 2021
+    let faixaIr3i=2826.66; // primeiro nível da terceira faixa do IRRF 2021
+    let faixaIr3=3751.05; // segundo nível da terceira faiza do IRRF 2021
+    let faixaIr4i=3751.06; // primeiro nível da quarta faixa do IRRF 2021
+    let faixaIr4=4664.68; // segundo nível da quarta faixa do IRRF 2021
+    let aliquotaIr1 = 0.075; // alíquota primeira faixa IRRF 2021
+    let aliquotaIr2 = 0.15; // alíquota segunda faixa IRRF 2021
+    let aliquotaIr3 = 0.225; // alíquota terceita faixa IRRF 2021
+    let aliquotaIr4 = 0.275; // alíquota quarta faixa IRRF 2021
+    let dedutivel1 = 142.80; // parcela dedutível primeira faixa IRRF 2021
+    let dedutivel2=354.80; // parcela dedutível segunda faixa IRRF 2021
+    let dedutivel3=636.13; // parcela dedutível terceira faixa IRRF 2021
+    let dedutivel4=869.36; // parcela dedutível quarta faixa IRRF 2021
     let vrInss = 0;
     let baseAntesDoIr =0;
     let vrIrpf = 0;
