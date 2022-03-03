@@ -2,13 +2,13 @@
 
 function previdenciaSocial(){
     let vrRenda = parseFloat(document.getElementById("renda").value.replace(/\./g,''));
-    let faixaReal1 = 1100; // primeira faixa do INSS 2020
-    let faixaReal2i = 1100.01; // primeiro nível da segudnda faixa do INSS 2020
-    let faixaReal2 = 2203.48; // segundo nível da segunda faixa do INSS 2020
-    let faixaReal3i = 2203.49; // primeiro nível da terceira faixa do INSS 2020
-    let faixaReal3 = 3305.22; // segundo nível da terceira faiza do INSS 2020
-    let faixaReal4i = 3305.23; // primeiro nível da quarta faixa do INSS 2020
-    let faixaReal4 = 6433.57; // segundo nível da quarta faixa do INSS 2020
+    let faixaReal1 = 1212; // primeira faixa do INSS 2020
+    let faixaReal2i = 1212.01; // primeiro nível da segudnda faixa do INSS 2020
+    let faixaReal2 = 2427.35; // segundo nível da segunda faixa do INSS 2020
+    let faixaReal3i = 2427.36; // primeiro nível da terceira faixa do INSS 2020
+    let faixaReal3 = 3641.03; // segundo nível da terceira faiza do INSS 2020
+    let faixaReal4i = 3641.04; // primeiro nível da quarta faixa do INSS 2020
+    let faixaReal4 = 7087.22; // segundo nível da quarta faixa do INSS 2020
     let aliquota1 = 0.075; // alíquota primeira faixa INSS 2020
     let aliquota2 = 0.090; // alíquota segunda faixa INSS 2020
     let aliquota3 = 0.120; // alíquota terceita faixa INSS 2020
@@ -20,7 +20,7 @@ function previdenciaSocial(){
     let faixaCoringa = 0; // suporte para calculo do INSS
     let inssSim = document.getElementById('select-inss').options[document.getElementById('select-inss').selectedIndex].value;
     let inssDevido = 0;
-    let salMinimo = 1045;
+    let salMinimo = 1212;
 
     if(vrRenda>=salMinimo){
         
@@ -128,7 +128,7 @@ function estimativaImpostoRenda(){
 function previRpa(){
     let vrServBruto = parseFloat(document.getElementById("servico").value.replace(/\./g,''));;
     let vrInssRpa = 0;
-    let ultimaFaixa = 6101.06; // segundo nível da quarta faixa do INSS 2020
+    let ultimaFaixa = 7087.22; // segundo nível da quarta faixa do INSS 2020
     
     if (Number.isNaN(vrServBruto)){
         vrServBruto = 0;
